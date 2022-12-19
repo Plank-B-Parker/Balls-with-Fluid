@@ -1,0 +1,13 @@
+﻿  Main.cpp
+C:\Users\user\Documents\My PlankBalls\Balls2 C++\Balls C++\src\Object\Mesh.h(32,8): warning C4200: nonstandard extension used: zero-sized array in struct/union
+C:\Users\user\Documents\My PlankBalls\Balls2 C++\Balls C++\src\Object\Mesh.h(32,8): message : This member will be ignored by a defaulted constructor or copy/move assignment operator
+C:\Users\user\Documents\My PlankBalls\Balls2 C++\Balls C++\src\Main.cpp(84,18): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\user\Documents\My PlankBalls\Balls2 C++\Balls C++\src\Maths and Physics\Field.h(41,14): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\user\Documents\My PlankBalls\Balls2 C++\Balls C++\src\Maths and Physics\Field.h(40): message : while compiling class template member function 'Field<float>::Field(vec2f,float,float,float)'
+C:\Users\user\Documents\My PlankBalls\Balls2 C++\Balls C++\src\Main.cpp(72): message : see reference to function template instantiation 'Field<float>::Field(vec2f,float,float,float)' being compiled
+C:\Users\user\Documents\My PlankBalls\Balls2 C++\Balls C++\src\Main.cpp(72): message : see reference to class template instantiation 'Field<float>' being compiled
+C:\Users\user\Documents\My PlankBalls\Balls2 C++\Balls C++\src\Maths and Physics\Field.h(42,15): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  Field.cpp
+  fluidGrid.cpp
+  Generating Code...
+  Balls C++.vcxproj -> C:\Users\user\Documents\My PlankBalls\Balls2 C++\Debug\Balls C++.exe
