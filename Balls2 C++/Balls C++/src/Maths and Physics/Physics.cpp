@@ -17,7 +17,7 @@ void Physics::updateMomentum(float dt)
 
 void Physics::computeForces()
 {
-	F = { 0,-0*9.81 };
+	F = vec2f(0,-0*9.81);
 	//Implement forces.
 
 	if (q->x > 1) {

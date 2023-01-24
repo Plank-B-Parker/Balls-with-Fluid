@@ -18,7 +18,7 @@ private:
 
 	std::vector<Object*> objects;
 	std::vector<Physics**> physs;
-	std::unordered_map<Mesh*, std::vector<Object*>> meshObjectMap;
+	std::unordered_map<Mesh*, std::vector<Object*> > meshObjectMap;
 
 	//std::unordered_map<std::unordered_set<char*,char*> , void (*)(Object*, Object*)> colFuncMap;
 

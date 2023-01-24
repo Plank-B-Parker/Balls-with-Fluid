@@ -65,7 +65,7 @@ struct CollisionGroup {
 
 private:
 	std::vector<CollisionPair> pairs;	//Pairs of valid and invalid collisions.
-	std::unordered_map<Object*, std::vector<CollisionPair>> collisionMap;	//Every collision each object is part of.
+	std::unordered_map<Object*, std::vector<CollisionPair> > collisionMap;	//Every collision each object is part of.
 
 	CollisionPair detectBallvsBall(Ball* ballA, Ball* ballB);
 	void resolveColBallvsBall(CollisionPair pair);

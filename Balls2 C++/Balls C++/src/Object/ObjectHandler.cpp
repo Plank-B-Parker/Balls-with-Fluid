@@ -9,6 +9,7 @@
 #include "Maths and Physics/Physics.h"
 #include "Maths and Physics/vec2f.h"
 #include <cmath>
+#include <iostream>
 
 ObjectHandler::ObjectHandler()
 {
@@ -23,7 +24,7 @@ void ObjectHandler::renderObjects(const Shader* shader) const
 		//Shader Uniforms.
 		shader->setFloat("radius", obj->getScale());
 		shader->setVec2f("centrePos", obj->pos);
-		shader->setVec2f("vel", vec2f(0, 0));
+		shader->setVec2f("vel", vec2f(0,0));
 		if(obj->phys)
 			shader->setVec2f("vel", obj->getPhys()->getVelocity());
 

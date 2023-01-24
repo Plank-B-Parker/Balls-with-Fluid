@@ -1,6 +1,6 @@
 
 
-#include "../../Dependencies/GLEW/include/GL/glew.h"
+#include "GL/glew.h"
 
 #include "Object/Object.h"
 #include <GLFW/glfw3.h>
@@ -23,6 +23,7 @@ int setupOpenGL() {
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+	glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
 
 	return 1;
 }
@@ -34,13 +35,15 @@ int main(void)
 	if (!setupOpenGL())
 		return -1;
 
-
 	// Create a windowed mode window and its OpenGL context.
 	GLFWwindow* window;
 
 	window = glfwCreateWindow(640, 640, "Hello World", NULL, NULL);
 	if (!window)
 	{
+
+		std::cout << "line 46" << std::endl;
+
 		glfwTerminate();
 		return -1;
 	}
@@ -54,6 +57,7 @@ int main(void)
 	else
 		std::cout << ":(" << std::endl;
 
+
 	//Load shader.
 	Shader objShader("src/Graphics/VertexShader.glsl", "src/Graphics/FragmentShader.glsl");
 	Shader fluidShader("src/Graphics/fluidVertexShader.glsl", "src/Graphics/fluidFragmentShader.glsl");
@@ -65,7 +69,7 @@ int main(void)
 	{
 		Ball* ball = new Ball(vec2f((i % 5) * 0.1f - 0.5f, 0), 0.05f, 1);
 		Physics* phys = new Physics(1);
-		phys->setVelocity({ 1,1 });
+		phys->setVelocity(vec2f(1,1));
 		
 		objects.addObject(ball);
 		ball->addPhysics(phys);
