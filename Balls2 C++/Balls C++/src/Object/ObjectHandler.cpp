@@ -63,7 +63,7 @@ void ObjectHandler::collideObjects()
 			Object* A = objects.at(i);
 			Object* B = objects.at(j);
 			
-			if (A->getName() == "Ball" && B->getName() == "Ball")
+			if (A->getName() == std::string("Ball") && B->getName() == std::string("Ball"))
 			{
 				Ball* ballA = dynamic_cast<Ball*>(A);
 				Ball* ballB = dynamic_cast<Ball*>(B);

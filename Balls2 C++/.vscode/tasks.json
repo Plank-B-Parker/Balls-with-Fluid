@@ -25,22 +25,25 @@
 			},
 
 			"windows":{
-				"command": "/usr/bin/g++",
+				"command": "C:\\msys64\\ucrt64\\bin\\g++.exe",
 				"args": [
 					"-fdiagnostics-color=always",
 					"-o",
 					"fluid.exe",
 					"-Isrc",
+					"-g",
+					"-static-libstdc++", "-static-libgcc",
+					"src/*.cpp",
+					"src/Graphics/*.cpp",
+					"src/Maths and Physics/*.cpp",
+					"src/Object/*.cpp",
 					"-IDependencies/GLEW/include",
 					"-IDependencies/GLFW/include",
-					"-LDependencies/GLFW/lib/",
+					"-LDependencies/GLFW/lib",
 					"-LDependencies/GLEW/lib/Release/x64",
-					"-g",
-					"src/**/*.cpp",
-					"-framework",
-					"OpenGL",
-					"-lglfw",
-					"-lglew"
+					"-lopengl32",
+					"-lglfw3dll",
+					"-lglew32"
 				]
 			},
 			
@@ -54,7 +57,7 @@
 				"kind": "build",
 				"isDefault": true
 			},
-			"detail": "compiler: C:\\msys64\\mingw64\\bin\\g++.exe"
+			"detail": "compiler: C:\\msys64\\ucrt64\\bin\\g++.exe"
 		}
 	]
 }

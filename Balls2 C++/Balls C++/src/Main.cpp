@@ -41,27 +41,23 @@ int main(void)
 	window = glfwCreateWindow(640, 640, "Hello World", NULL, NULL);
 	if (!window)
 	{
-
-		std::cout << "line 46" << std::endl;
-
 		glfwTerminate();
 		return -1;
 	}
 
 	// Make the window's context current.
 	glfwMakeContextCurrent(window);
-
+	
 	//GLEW check
 	if (glewInit() == GLEW_OK)
 		std::cout << ":)" << std::endl;
 	else
 		std::cout << ":(" << std::endl;
 
-
 	//Load shader.
 	Shader objShader("src/Graphics/VertexShader.glsl", "src/Graphics/FragmentShader.glsl");
 	Shader fluidShader("src/Graphics/fluidVertexShader.glsl", "src/Graphics/fluidFragmentShader.glsl");
-	
+
 	//Set up objects in scene.
 	ObjectHandler objects;
 
@@ -98,7 +94,6 @@ int main(void)
 
 		objShader.use();
 		objects.renderObjects(&objShader);
-		
 
 		/* Poll for and process events */
 		glfwPollEvents();

@@ -32,7 +32,7 @@ struct CollisionPair {
 	Object *A, *B;	
 	
 	vec2f dir = 0;	//Direction of penetration.
-	float penDepth = NAN;	//Penetration depth. Negative if resolved.
+	float penDepth = 0;	//Penetration depth. Negative if resolved.
 
 	vec2f relVel;	//Relative velocity.
 
